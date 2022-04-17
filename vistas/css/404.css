@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+#error_404 {
+    font-family: 'Arvo', serif;
+}
+
+#imagen {
+    max-width: 100%;
+    height: auto;
+}
+
+#titulo {
+    color: white;
+    font-size: 8rem;
+}
