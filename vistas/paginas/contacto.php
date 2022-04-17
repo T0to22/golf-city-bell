@@ -23,7 +23,7 @@
 
             <div class="row">
 
-                <div class="col-sm-12 col-md-6 mx-auto">
+                <div class="col-sm-12 col-md-12 col-xl-6 mx-auto">
 
                     <div>
                         <h3 class="mb-3">Club Hipico y de Golf de City Bell</h3>
@@ -62,7 +62,7 @@
 
                 </div>
 
-                <div class="col-sm-12 col-md-6 mx-auto">
+                <div class="col-sm-12 col-md-12 col-xl-6 mx-auto">
 
                     <img src="/vistas/img/contacto.jpg" alt="Club Hipico y de Golf City Bell" id="foto1" class="img-fluid img-thumbnail">
 

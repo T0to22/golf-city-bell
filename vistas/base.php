@@ -25,7 +25,7 @@
 
 				<img src="/vistas/img/hipico-blanco.png" alt="Logo Club Hipico y de Golf City Bell" id="logo_club" class="navbar-brand">
 
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu_principal" aria-controls="menu_principal" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menu_principal" aria-controls="menu_principal" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
@@ -34,7 +34,7 @@
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="index.php?path=inicio"> <i id="icono" class="fa-solid fa-house fa-xs"></i> Inicio</a>
+							<a class="nav-link" aria-current="page" href="index.php?path=inicio"> <i class="fa-solid fa-house fa-xs"></i> Inicio</a>
 						</li>
 
 						<li class="nav-item">
@@ -42,7 +42,7 @@
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" href="index.php?path=contacto"> <i id="icono" class="fa-solid fa-id-card-clip fa-xs"></i> Contacto</a>
+							<a class="nav-link" href="index.php?path=contacto"> <i class="fa-solid fa-id-card-clip fa-xs"></i> Contacto</a>
 						</li>
 
 					</ul>
@@ -51,10 +51,10 @@
 
 						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 							<li class="nav-item">
-								<a class="nav-link" href="index.php?path=registro"> <i id="icono" class="fa-solid fa-user-plus fa-xs"></i> Registro</a>
+								<a class="nav-link" href="index.php?path=registro"> <i class="fa-solid fa-user-plus fa-xs"></i> Registro</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="index.php?path=enconstruccion"> <i id="icono" class="fa-solid fa-arrow-right-to-bracket fa-xs"></i> Login</a>
+								<a class="nav-link" href="index.php?path=enconstruccion"> <i class="fa-solid fa-arrow-right-to-bracket fa-xs"></i> Login</a>
 							</li>
 						</ul>
 
