@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error 404</title>
+    
     <link rel="stylesheet" href="/vistas/css/404.css">
 </head>
 
