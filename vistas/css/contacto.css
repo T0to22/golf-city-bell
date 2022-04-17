@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 
-#registro {
+#contacto {
     font-family: 'Arvo', serif;
+}
+
+#redes_sociales{
+    max-width: 50px;
+}
+
+#redes_sociales1{
+    max-width: 60px;
+}
+
+#links{
+    text-decoration: none;
+    color: black;
 }

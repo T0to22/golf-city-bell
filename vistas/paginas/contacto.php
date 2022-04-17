@@ -21,14 +21,21 @@
 
         <div class="card-body">
 
-            <div>
-                <p>Te dejamos nuestras formas de contacto y nuestras redes sociales para que puedas comunicarte con nosotros cuando quieras.</p>
-
-            </div>
-
             <div class="row">
 
                 <div class="col-sm-12 col-md-6 mx-auto">
+
+                    <div>
+                        <h3 class="mb-3">Club Hipico y de Golf de City Bell</h3>
+                        <p class="my-2"> <i class="fa-solid fa-location-dot text-danger"></i>&nbsp; <a href="https://www.google.com/maps/dir//-34.8634661,-58.0462073/@-34.8635355,-58.0462382,20.75z/data=!4m2!4m1!3e0" target="_blank" rel="noopener noreferrer" id="links"> Calle Labougle y 10, City Bell. Buenos Aires. Argentina.</a></p>
+                        <p class="my-2"> <i class="fa-solid fa-phone text-success"></i>&nbsp;+54 221 480 0169</p>
+                        <p class="my-2"> <i class="fa-solid fa-at text-info"></i>&nbsp;<a href="mailto:clubhipicoydegolfcb@gmail.com" id="links" target="_blank" rel="noopener noreferrer">clubhipicoydegolfcb@gmail.com</a></p>
+
+                    </div>
+
+                    <hr>
+
+                    <h4 class="text-center mt-3">Formulario de contacto</h4>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="nombreApellido"> <i class="fa-solid fa-signature"></i></span>
@@ -40,18 +47,24 @@
                         <input type="text" class="form-control" placeholder="Tu dirección de e-mail" aria-label="Tu dirección de e-mail" aria-describedby="email">
                     </div>
 
-                    <div class="mb-3">
-                        <textarea class="form-control" id="mensaje" rows="3" placeholder="Tu mensaje"></textarea>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="telefono"> <i class="fa-solid fa-phone"></i></span>
+                        <input type="text" class="form-control" placeholder="Tu número de teléfono" aria-label="Tu número de teléfono" aria-describedby="telefono">
+                    </div>
+
+                    <div>
+                        <textarea class="form-control" id="mensaje" rows="5" placeholder="Tu mensaje"></textarea>
+                    </div>
+
+                    <div class="my-2">
+                        <a href="#" class="btn btn-outline-success">Enviar Mensaje</a>
                     </div>
 
                 </div>
 
                 <div class="col-sm-12 col-md-6 mx-auto">
 
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="email"> <i class="fa-solid fa-signature"></i></span>
-                        <input type="text" class="form-control" placeholder="Tu dirección de e-mail" aria-label="Tu dirección de e-mail" aria-describedby="email">
-                    </div>
+                    <img src="/vistas/img/contacto.jpg" alt="Club Hipico y de Golf City Bell" id="foto1" class="img-fluid img-thumbnail">
 
                 </div>
 
@@ -60,7 +73,19 @@
         </div>
 
         <div class="card-footer text-muted">
-            <a href="#" class="btn btn-outline-success">Confirmar Registro</a>
+
+            <div class="row">
+
+                <div class="col-sm-12 col-md-6">
+                    <a href="https://www.facebook.com/Club-Hipico-y-de-Golf-City-Bell-182076338483120" target="_blank" rel="noopener noreferrer"><img src="/vistas/img/facebook.svg" alt="Facebook" id="redes_sociales"></a>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
+                    <a href="https://www.instagram.com/golfcitybell/" target="_blank" rel="noopener noreferrer" class="m-0"><img src="/vistas/img/instagram.svg" alt="Instagram" id="redes_sociales" class="m-0"></a>
+                </div>
+
+            </div>
+
         </div>
 
     </section>

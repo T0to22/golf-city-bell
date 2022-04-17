@@ -32,26 +32,19 @@
 				<div class="collapse navbar-collapse" id="menu_principal">
 
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						
 						<li class="nav-item">
 							<a class="nav-link" aria-current="page" href="index.php?path=inicio"> <i id="icono" class="fa-solid fa-house fa-xs"></i> Inicio</a>
 						</li>
 
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navDisciplinas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<i id="icono" class="fa-solid fa-route fa-xs"></i> Disciplinas
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navDisciplinas">
-								<li><a class="dropdown-item" href="#"> <i class="fa-solid fa-golf-ball-tee"></i> Golf</a></li>
-								<li><a class="dropdown-item" href="#"> <i class="fa-solid fa-horse-head"></i> Hipismo</a></li>
-							</ul>
+						<li class="nav-item">
+							<a class="nav-link" href="index.php?path=golf"> <i class="fa-solid fa-golf-ball-tee"></i> Golf</a>
 						</li>
 
 						<li class="nav-item">
 							<a class="nav-link" href="index.php?path=contacto"> <i id="icono" class="fa-solid fa-id-card-clip fa-xs"></i> Contacto</a>
 						</li>
-						<!-- <li class="nav-item">
-								<a class="nav-link" href="index.php?path=hoyos">Hoyos</a>
-							</li> -->
+
 					</ul>
 
 					<div class="d-flex">
@@ -61,7 +54,7 @@
 								<a class="nav-link" href="index.php?path=registro"> <i id="icono" class="fa-solid fa-user-plus fa-xs"></i> Registro</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="index.php?path=login"> <i id="icono" class="fa-solid fa-arrow-right-to-bracket fa-xs"></i> Login</a>
+								<a class="nav-link" href="index.php?path=enconstruccion"> <i id="icono" class="fa-solid fa-arrow-right-to-bracket fa-xs"></i> Login</a>
 							</li>
 						</ul>
 
@@ -74,13 +67,13 @@
 
 	</header>
 
-	<section class="container my-5 container-fluid" id="wrapper">
+	<section class="container my-5 container-fluid" id="contenido">
 
 		<?php
 
 		if (isset($_GET['path'])) {
 
-			if ($_GET['path'] == 'inicio' || $_GET['path'] == 'registro' || $_GET['path'] == 'contacto') {
+			if ($_GET['path'] == 'inicio' || $_GET['path'] == 'golf' || $_GET['path'] == 'registro' || $_GET['path'] == 'contacto' || $_GET['path'] == 'enconstruccion') {
 
 				include 'vistas/paginas/' . $_GET['path'] . '.php';
 			} else {
