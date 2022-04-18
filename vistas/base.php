@@ -38,7 +38,7 @@
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" href="index.php?path=golf"> <i class="fa-solid fa-golf-ball-tee"></i> Golf</a>
+							<a class="nav-link" href="index.php?path=enconstruccion"> <i class="fa-solid fa-golf-ball-tee"></i> Golf</a>
 						</li>
 
 						<li class="nav-item">
