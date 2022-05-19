@@ -16,13 +16,13 @@
     <section class="card text-center" id="registro">
 
         <div class="card-header">
-            <h1 class="text-center">Registro en el Club</h1>
+            <h1 class="text-center">Inicio de Sesion en el Club</h1>
         </div>
 
         <div class="card-body">
 
             <div>
-                <p>Completa el formulario para darte de alta en el club.</p>
+                <p>Ingresa tu email y tu contraseña para iniciar sesion.</p>
 
             </div>
 
@@ -31,32 +31,24 @@
                 <form action="" method="POST">
 
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="nombre"> <i class="fa-solid fa-user"></i> </span>
-                        <input type="text" class="form-control" placeholder="Tu nombre" aria-label="Tu nombre" aria-describedby="nombre" id="nombre" name="registroNombre" autocomplete="off">
-                    </div>
-
-                    <div class="input-group mb-3">
                         <span class="input-group-text" id="email"> <i class="fa-solid fa-at"></i> </span>
-                        <input type="text" class="form-control" placeholder="Tu dirección de e-mail" aria-label="Tu dirección de e-mail" aria-describedby="email" id="email" name="registroEmail" autocomplete="off">
+                        <input type="text" class="form-control" placeholder="Tu dirección de e-mail" aria-label="Tu dirección de e-mail" aria-describedby="email" id="email" name="inEmail" autocomplete="off" value="marcelo@ntasistemas.com.ar">
                     </div>
 
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="pwd"> <i class="fa-solid fa-key"></i> </span>
-                        <input type="password" class="form-control" placeholder="Tu contraseña" aria-label="Tu contraseña" aria-describedby="pwd" id="pwd" name="registroPWD">
+                        <input type="password" class="form-control" placeholder="Tu contraseña" aria-label="Tu contraseña" aria-describedby="pwd" id="pwd" name="inPWD" value="1234">
                     </div>
 
-                    <input type="submit" class="btn btn-outline-success" value="Confirmar Registro">
-
-
+                    <input type="submit" class="btn btn-outline-success" value="Iniciar Sesion">
 
                 </form>
-
 
             </div>
 
             <?php
 
-            $registro = ControladorForms::ctrRegistroUsuario();
+                $login = ControladorForms::ctrLogin();
 
             ?>
 

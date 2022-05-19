@@ -58,7 +58,7 @@
 								<a class="nav-link" href="index.php?path=registro"> <i class="fa-solid fa-user-plus fa-xs"></i> Registro</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="index.php?path=enconstruccion"> <i class="fa-solid fa-arrow-right-to-bracket fa-xs"></i> Login</a>
+								<a class="nav-link" href="index.php?path=login"> <i class="fa-solid fa-arrow-right-to-bracket fa-xs"></i> Login</a>
 							</li>
 						</ul>
 
@@ -77,7 +77,7 @@
 
 		if (isset($_GET['path'])) {
 
-			if ($_GET['path'] == 'inicio' || $_GET['path'] == 'golf' || $_GET['path'] == 'galeria' || $_GET['path'] == 'registro' || $_GET['path'] == 'contacto' || $_GET['path'] == 'enconstruccion') {
+			if ($_GET['path'] == 'inicio' || $_GET['path'] == 'golf' || $_GET['path'] == 'galeria' || $_GET['path'] == 'registro' || $_GET['path'] == 'contacto' || $_GET['path'] == 'login' || $_GET['path'] == 'enconstruccion' || $_GET['path'] == 'usuario' || $_GET['path'] == 'admin') {
 
 				include 'vistas/paginas/' . $_GET['path'] . '.php';
 			} else {
