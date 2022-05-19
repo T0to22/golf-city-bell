@@ -8,19 +8,19 @@ class ModeloForms{
     //Insert
     static public function modelRegistroUsuario($datos){
 
-        // echo $datos['email'] . ' - ' . $datos['pwd'];
+        $sql = 'call nuevoUsuario( :email, :pwd )';
+        $stmt = ConexionDB::conectar()->prepare($sql);
 
-        $sql = 'call nuevoUsuario( ?, ? )';
-        $stmt = ConexionDB::conectarLocal()->prepare($sql);
-        $stmt->bind_param('ss', $datos['email'], $datos['pwd']);
+        $stmt -> bindParam(':email', $datos['email'], PDO::PARAM_STR);
+        $stmt -> bindParam(':pwd', $datos['pwd'], PDO::PARAM_STR);
 
         if ($stmt->execute()) {
-            echo "OK";
+            echo '<p class="pt-2">Registro completo correctamente.</p>';
         } else {
-            echo $stmt -> error;
+            echo ConexionDB::conectar() -> errorInfo();
         }
 
-        $stmt->close();
+        $stmt->closeCursor();
 
     }
 
