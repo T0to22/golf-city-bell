@@ -26,7 +26,7 @@
                 <button type="button" data-bs-target="#galeriaImagenes" data-bs-slide-to="7" aria-label="Slide 8"></button>
                 <button type="button" data-bs-target="#galeriaImagenes" data-bs-slide-to="8" aria-label="Slide 9"></button>
                 <button type="button" data-bs-target="#galeriaImagenes" data-bs-slide-to="9" aria-label="Slide 10"></button>
-            
+
             </div>
 
             <div class="carousel-inner text-center">
@@ -73,7 +73,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-            
+
         </div>
 
     </div>

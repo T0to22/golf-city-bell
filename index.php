@@ -16,4 +16,4 @@ require_once 'modelos/forms.modelos.php';
 require_once 'modelos/mails.modelos.php';
 
 $base = new ControladorBase();
-$base -> ctrGetBase();
+$base->ctrGetBase();

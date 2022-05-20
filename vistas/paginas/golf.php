@@ -10,11 +10,11 @@
 
 <body>
 
-<div class="container-fluid">
+    <div class="container-fluid">
 
-    <iframe src="https://ar.digitalgolftour.com/citybell/leaderboard" frameborder="0" width="100%" height="850px" style="max-height: 900px;"></iframe>
+        <iframe src="https://ar.digitalgolftour.com/citybell/leaderboard" frameborder="0" width="100%" height="850px" style="max-height: 900px;"></iframe>
 
-</div>    
+    </div>
 
 </body>
 

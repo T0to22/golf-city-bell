@@ -88,7 +88,7 @@ $usuarios = ControladorForms::ctrSeleccionarUsuarios();
 
             <?php
 
-                $eliminarUsuario = ControladorForms::crtEliminarUsuario();
+            $eliminarUsuario = ControladorForms::crtEliminarUsuario();
 
             ?>
 

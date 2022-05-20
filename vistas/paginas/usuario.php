@@ -4,7 +4,7 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
-if ( !isset($_SESSION['login']) ){
+if (!isset($_SESSION['login'])) {
     header("Location: /");
     exit();
 }
@@ -61,16 +61,13 @@ if ( !isset($_SESSION['login']) ){
 
             <?php
 
-                $update = ControladorForms::ctrActualizarDatosUsuario();
+            $update = ControladorForms::ctrActualizarDatosUsuario();
 
             ?>
 
         </div>
 
-
     </section>
-
-
 
 </body>
 

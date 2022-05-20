@@ -65,7 +65,7 @@
                     </form>
 
                     <?php
-                        $envioMail = ControladorMails::EnviarMail();
+                    $envioMail = ControladorMails::EnviarMail();
                     ?>
 
                 </div>

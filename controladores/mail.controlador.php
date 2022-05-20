@@ -1,19 +1,16 @@
 <?php
 
-class ControladorMails {
+class ControladorMails
+{
 
-    static public function EnviarMail(){
+    static public function EnviarMail()
+    {
 
         if (isset($_POST['contactoNombreApellido'], $_POST['contactoEmail'], $_POST['contactoTelefono'], $_POST['contactoMensaje'])) {
 
-            // $para = 'clubhipicoydegolfcb@gmail.com';
             $desde = $_POST['contactoEmail'];
-            $telefono =$_POST['contactoTelefono'];
+            $telefono = $_POST['contactoTelefono'];
             $mensaje = $_POST['contactoMensaje'];
-            // $cabeceras = 'From: webmaster@example.com';
-
-            // mail($para, $titulo, $mensaje, $cabeceras);
-            // return mail($para, $titulo, $mensaje);
 
             $datos = array(
                 'desde' => $desde,
@@ -23,9 +20,6 @@ class ControladorMails {
 
             $respuesta = ModeloMails::EnvioMail($datos);
             return $respuesta;
-            
         };
-
     }
-
 }

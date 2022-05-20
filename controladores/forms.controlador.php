@@ -40,7 +40,7 @@ class ControladorForms
     static public function ctrActualizarDatosUsuario()
     {
 
-        if (isset($_POST['updateUsuario'], $_POST['updateEmail'] )) {
+        if (isset($_POST['updateUsuario'], $_POST['updateEmail'])) {
 
             $datos =  array(
                 'usuario' => $_POST['updateUsuario'],
@@ -52,11 +52,11 @@ class ControladorForms
         };
     }
 
-    static public function ctrSeleccionarUsuarios(){
+    static public function ctrSeleccionarUsuarios()
+    {
 
         $respuesta = ModeloForms::modelSeleccionarUsuarios();
         return $respuesta;
-
     }
 
     //Eliminar Usuario
@@ -70,6 +70,5 @@ class ControladorForms
             $respuesta = ModeloForms::modelEliminarUsuarioPorID($id_usuario);
             return $respuesta;
         };
-    }    
-
+    }
 }

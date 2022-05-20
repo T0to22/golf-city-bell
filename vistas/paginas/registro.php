@@ -47,10 +47,7 @@
 
                     <input type="submit" class="btn btn-outline-success" value="Confirmar Registro">
 
-
-
                 </form>
-
 
             </div>
 
@@ -62,10 +59,7 @@
 
         </div>
 
-
     </section>
-
-
 
 </body>
 

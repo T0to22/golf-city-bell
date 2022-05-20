@@ -89,7 +89,6 @@ class ModeloForms
             $_SESSION['datos_usuario']['email'] = $datos['email'];
 
             echo '<script> window.location = "index.php?path=usuario" </script>';
-
         } else {
             $error = $stmt->errorInfo();
             echo '<p class="mt-2"> Error: ' . $error[2] . '</p>';
@@ -122,7 +121,7 @@ class ModeloForms
     {
 
         $sql = 'call eliminarUsuarioPorID( :id_usuario )';
-        
+
         $stmt = ConexionDB::conectar()->prepare($sql);
         $stmt->bindParam(':id_usuario', $id_usuario, PDO::PARAM_INT);
 

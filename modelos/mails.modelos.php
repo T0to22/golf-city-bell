@@ -3,7 +3,8 @@
 class ModeloMails
 {
 
-    static public function EnvioMail($datos){
+    static public function EnvioMail($datos)
+    {
 
         $para = 'marcelo@ntasistemas.com.ar';
         $asunto = 'Contacto desde la Web del Club de Golf de City Bell';
@@ -16,7 +17,5 @@ class ModeloMails
         } else {
             echo '<p class="pt-2 text-danger">Ha ocurrido un error, por favor intenta nuevamente.</p>';
         };
-
     }
-
 }
