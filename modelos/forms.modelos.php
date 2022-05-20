@@ -14,17 +14,18 @@ class ModeloForms
     static public function modelRegistroUsuario($datos)
     {
 
-        $sql = 'call nuevoUsuario( :nombre, :email, :pwd )';
+        $sql = 'call nuevoUsuario( :usuario, :email, :pwd )';
         $stmt = ConexionDB::conectar()->prepare($sql);
 
-        $stmt->bindParam(':nombre', $datos['nombre'], PDO::PARAM_STR);
+        $stmt->bindParam(':usuario', $datos['usuario'], PDO::PARAM_STR);
         $stmt->bindParam(':email', $datos['email'], PDO::PARAM_STR);
         $stmt->bindParam(':pwd', $datos['pwd'], PDO::PARAM_STR);
 
         if ($stmt->execute()) {
             echo '<p class="pt-2">Registro completo correctamente.</p>';
         } else {
-            echo ConexionDB::conectar()->errorInfo();
+            $error = $stmt->errorInfo();
+            echo '<p class="mt-2"> Error: ' . $error[2] . '</p>';
         }
 
         $stmt->closeCursor();
@@ -34,10 +35,10 @@ class ModeloForms
     static public function modelLogin($datos)
     {
 
-        $sql = 'call loginUsuario( :email, :pwd )';
+        $sql = 'call loginUsuario( :usuario, :pwd )';
         $stmt = ConexionDB::conectar()->prepare($sql);
 
-        $stmt->bindParam(':email', $datos['email'], PDO::PARAM_STR);
+        $stmt->bindParam(':usuario', $datos['usuario'], PDO::PARAM_STR);
         $stmt->bindParam(':pwd', $datos['pwd'], PDO::PARAM_STR);
 
         if ($stmt->execute()) {
@@ -48,7 +49,7 @@ class ModeloForms
 
                 foreach ($resultado as $datos => $dato) {
                     $_SESSION['datos_usuario']['id_usuario'] = $dato['id'];
-                    $_SESSION['datos_usuario']['nombre'] = $dato['nombre'];
+                    $_SESSION['datos_usuario']['usuario'] = $dato['usuario'];
                     $_SESSION['datos_usuario']['email'] = $dato['email'];
                     $_SESSION['datos_usuario']['tipo_usuario'] = $dato['tipo'];
                 }
@@ -64,7 +65,8 @@ class ModeloForms
                 echo '<p class="pt-2">Usuario o contraseña incorrectos.</p>';
             };
         } else {
-            echo ConexionDB::conectar()->errorInfo();
+            $error = $stmt->errorInfo();
+            echo '<p class="mt-2"> Error: ' . $error[2] . '</p>';
         }
 
         $stmt->closeCursor();
@@ -74,17 +76,23 @@ class ModeloForms
     static public function modelActualizarDatosUsuario($datos)
     {
 
-        $sql = 'call actualizarDatosUsuario( :id, :nombre, :email )';
+        $sql = 'call actualizarDatosUsuario( :id, :usuario, :email )';
         $stmt = ConexionDB::conectar()->prepare($sql);
 
         $stmt->bindParam(':id', $_SESSION['datos_usuario']['id_usuario'], PDO::PARAM_INT);
-        $stmt->bindParam(':nombre', $datos['nombre'], PDO::PARAM_STR);
+        $stmt->bindParam(':usuario', $datos['usuario'], PDO::PARAM_STR);
         $stmt->bindParam(':email', $datos['email'], PDO::PARAM_STR);
 
         if ($stmt->execute()) {
-            echo '<p class="pt-2">Registro actualizado correctamente.</p>';
+
+            $_SESSION['datos_usuario']['usuario'] = $datos['usuario'];
+            $_SESSION['datos_usuario']['email'] = $datos['email'];
+
+            echo '<script> window.location = "index.php?path=usuario" </script>';
+
         } else {
-            echo ConexionDB::conectar()->errorInfo();
+            $error = $stmt->errorInfo();
+            echo '<p class="mt-2"> Error: ' . $error[2] . '</p>';
         }
 
         $stmt->closeCursor();
@@ -101,10 +109,29 @@ class ModeloForms
 
             $resultado = $stmt->fetchAll();
             return $resultado;
-
-
         } else {
-            echo ConexionDB::conectar()->errorInfo();
+            $error = $stmt->errorInfo();
+            echo '<p class="mt-2"> Error: ' . $error[2] . '</p>';
+        }
+
+        $stmt->closeCursor();
+    }
+
+    //Reset Password de Usuario por ID
+    static public function modelEliminarUsuarioPorID($id_usuario)
+    {
+
+        $sql = 'call eliminarUsuarioPorID( :id_usuario )';
+        
+        $stmt = ConexionDB::conectar()->prepare($sql);
+        $stmt->bindParam(':id_usuario', $id_usuario, PDO::PARAM_INT);
+
+        if ($stmt->execute()) {
+            // echo '<p class="pt-2">El usuario ha sido eliminado correctamente.</p>';
+            echo '<script> window.location = "index.php?path=admin" </script>';
+        } else {
+            $error = $stmt->errorInfo();
+            echo '<p class="mt-2"> Error: ' . $error[2] . '</p>';
         }
 
         $stmt->closeCursor();

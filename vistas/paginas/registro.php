@@ -31,8 +31,8 @@
                 <form action="" method="POST">
 
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="nombre"> <i class="fa-solid fa-user"></i> </span>
-                        <input type="text" class="form-control" placeholder="Tu nombre" aria-label="Tu nombre" aria-describedby="nombre" id="nombre" name="registroNombre" autocomplete="off">
+                        <span class="input-group-text" id="usuario"> <i class="fa-solid fa-user"></i> </span>
+                        <input type="text" class="form-control" placeholder="Tu usuario" aria-label="Tu usuario" aria-describedby="usuario" id="usuario" name="registroUsuario" autocomplete="off">
                     </div>
 
                     <div class="input-group mb-3">

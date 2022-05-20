@@ -37,28 +37,36 @@
 
                     <h4 class="text-center mt-3">Formulario de contacto</h4>
 
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="nombreApellido"> <i class="fa-solid fa-signature"></i></span>
-                        <input type="text" class="form-control" placeholder="Tu nombre y apellido" aria-label="Tu nombre y apellido" aria-describedby="nombreApellido">
-                    </div>
+                    <form method="post" id="formularioContacto">
 
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="email"> <i class="fa-solid fa-at"></i></span>
-                        <input type="text" class="form-control" placeholder="Tu dirección de e-mail" aria-label="Tu dirección de e-mail" aria-describedby="email">
-                    </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="nombreApellido"> <i class="fa-solid fa-signature"></i></span>
+                            <input type="text" class="form-control" placeholder="Tu nombre y apellido" aria-label="Tu nombre y apellido" aria-describedby="nombreApellido" name="contactoNombreApellido">
+                        </div>
 
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="telefono"> <i class="fa-solid fa-phone"></i></span>
-                        <input type="text" class="form-control" placeholder="Tu número de teléfono" aria-label="Tu número de teléfono" aria-describedby="telefono">
-                    </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="email"> <i class="fa-solid fa-at"></i></span>
+                            <input type="text" class="form-control" placeholder="Tu dirección de e-mail" aria-label="Tu dirección de e-mail" aria-describedby="email" name="contactoEmail">
+                        </div>
 
-                    <div>
-                        <textarea class="form-control" id="mensaje" rows="5" placeholder="Tu mensaje"></textarea>
-                    </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="telefono"> <i class="fa-solid fa-phone"></i></span>
+                            <input type="text" class="form-control" placeholder="Tu número de teléfono" aria-label="Tu número de teléfono" aria-describedby="telefono" name="contactoTelefono">
+                        </div>
 
-                    <div class="my-2">
-                        <a href="#" class="btn btn-outline-success">Enviar Mensaje</a>
-                    </div>
+                        <div>
+                            <textarea class="form-control" id="mensaje" rows="5" placeholder="Tu mensaje" name="contactoMensaje"></textarea>
+                        </div>
+
+                        <div class="my-2">
+                            <input type="submit" class="btn btn-outline-success" value="Enviar Mensaje">
+                        </div>
+
+                    </form>
+
+                    <?php
+                        $envioMail = ControladorMails::EnviarMail();
+                    ?>
 
                 </div>
 

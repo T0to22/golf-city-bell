@@ -1,3 +1,11 @@
+<?php
+
+if (!isset($_SESSION)) {
+	session_start();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +40,7 @@
 				<div class="collapse navbar-collapse" id="menu_principal">
 
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-						
+
 						<li class="nav-item">
 							<a class="nav-link" aria-current="page" href="index.php?path=inicio"> <i class="fa-solid fa-house fa-xs"></i> Inicio</a>
 						</li>
@@ -54,12 +62,39 @@
 					<div class="d-flex">
 
 						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-							<li class="nav-item">
-								<a class="nav-link" href="index.php?path=registro"> <i class="fa-solid fa-user-plus fa-xs"></i> Registro</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="index.php?path=login"> <i class="fa-solid fa-arrow-right-to-bracket fa-xs"></i> Login</a>
-							</li>
+
+							<?php if (isset($_SESSION['login'])) : ?>
+
+								<?php if ($_SESSION['datos_usuario']['tipo_usuario'] === 'admin') : ?>
+
+									<li class="nav-item">
+										<a class="nav-link" href="index.php?path=admin"> <i class="fa-solid fa-users"></i> Admin. de Usuarios</a>
+									</li>
+
+								<?php else : ?>
+
+									<li class="nav-item">
+										<a class="nav-link" href="index.php?path=usuario"> <i class="fa-solid fa-user-pen"></i> Mis Datos</a>
+									</li>
+
+								<?php endif; ?>
+
+								<li class="nav-item">
+									<a class="nav-link" href="index.php?path=logout"> <i class="fa-solid fa-arrow-right-to-bracket fa-xs"></i> Cerrar Sesion</a>
+								</li>
+
+							<?php else : ?>
+
+								<li class="nav-item">
+									<a class="nav-link" href="index.php?path=registro"> <i class="fa-solid fa-user-plus fa-xs"></i> Registro</a>
+								</li>
+
+								<li class="nav-item">
+									<a class="nav-link" href="index.php?path=login"> <i class="fa-solid fa-arrow-right-to-bracket fa-xs"></i> Login</a>
+								</li>
+
+							<?php endif; ?>
+
 						</ul>
 
 					</div>
@@ -77,7 +112,7 @@
 
 		if (isset($_GET['path'])) {
 
-			if ($_GET['path'] == 'inicio' || $_GET['path'] == 'golf' || $_GET['path'] == 'galeria' || $_GET['path'] == 'registro' || $_GET['path'] == 'contacto' || $_GET['path'] == 'login' || $_GET['path'] == 'enconstruccion' || $_GET['path'] == 'usuario' || $_GET['path'] == 'admin') {
+			if ($_GET['path'] == 'inicio' || $_GET['path'] == 'golf' || $_GET['path'] == 'galeria' || $_GET['path'] == 'registro' || $_GET['path'] == 'contacto' || $_GET['path'] == 'login' || $_GET['path'] == 'enconstruccion' || $_GET['path'] == 'usuario' || $_GET['path'] == 'admin' || $_GET['path'] == 'logout') {
 
 				include 'vistas/paginas/' . $_GET['path'] . '.php';
 			} else {

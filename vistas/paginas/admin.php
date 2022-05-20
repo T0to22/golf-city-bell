@@ -52,7 +52,7 @@ $usuarios = ControladorForms::ctrSeleccionarUsuarios();
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Nombre</th>
+                            <th scope="col">Usuario</th>
                             <th scope="col">Email</th>
                             <th scope="col">Tipo de Usuario</th>
                             <th scope="col">Acciones</th>
@@ -64,24 +64,16 @@ $usuarios = ControladorForms::ctrSeleccionarUsuarios();
 
                             <tr>
                                 <td class="align-middle"> <?php echo ($key + 1) ?> </td>
-                                <td class="align-middle"> <?php echo $dato['nombre'] ?> </td>
+                                <td class="align-middle"> <?php echo $dato['usuario'] ?> </td>
                                 <td class="align-middle"> <?php echo $dato['email'] ?> </td>
                                 <td class="align-middle"> <?php echo $dato['tipo'] ?> </td>
                                 <td class="align-middle">
                                     <?php if ($dato['tipo'] !== 'admin') : ?>
 
-                                        <div class="row">
-                                            <div class="col m-0 p-0">
-                                                <form method="post" id="blanquearPWD">
-                                                    <button type="submit" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-key"></i></button>
-                                                </form>
-                                            </div>
-                                            <div class="col m-0 p-0">
-                                                <form method="post" id="eliminarUsuario">
-                                                    <button type="submit" class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-trash-can"></i></button>
-                                                </form>
-                                            </div>
-                                        </div>
+                                        <form method="post" id="eliminarUsuario">
+                                            <input type="hidden" name="eliminarUsuario" value=" <?php echo $dato['id'] ?> ">
+                                            <button type="submit" class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-trash-can"></i></button>
+                                        </form>
 
                                     <?php endif ?>
                                 </td>
@@ -93,6 +85,12 @@ $usuarios = ControladorForms::ctrSeleccionarUsuarios();
                 </table>
 
             </div>
+
+            <?php
+
+                $eliminarUsuario = ControladorForms::crtEliminarUsuario();
+
+            ?>
 
         </div>
 
